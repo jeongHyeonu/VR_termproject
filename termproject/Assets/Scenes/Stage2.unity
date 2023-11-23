@@ -1029,7 +1029,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _handGrabState: {fileID: 585013238}
-  _syntheticHand: {fileID: 0}
+  _syntheticHand: {fileID: 6128136803586696081, guid: 81b0c6f02d961984eb074b9834c049ae, type: 3}
 --- !u!1 &391561086
 GameObject:
   m_ObjectHideFlags: 0
@@ -1865,7 +1865,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _handGrabState: {fileID: 2014203515}
-  _syntheticHand: {fileID: 0}
+  _syntheticHand: {fileID: 4655985015963892112, guid: 392af43851d822242be5b1ae72b35b46, type: 3}
 --- !u!1 &1026502818
 GameObject:
   m_ObjectHideFlags: 0
