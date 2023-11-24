@@ -4,13 +4,27 @@ using UnityEngine;
 
 public class RecycleItem : MonoBehaviour
 {
-    [SerializeField] GameObject conveyorBeltObj;
-    private float moveSpeed;
-    private bool istemOnConveyor = false;
-
-    private void OnCollisionStay(Collision collision)
+    public enum ItemType
     {
-        //moveSpeed = conveyorBeltObj
-        //istemOnConveyor = true;
+        pet,
+        plastic_pp,
+        plastic_pe,
+        plastic_ps,
+        plastic_other,
+        vinyl_pp,
+        vinyl_pe,
+        vinyl_ps,
+        vinyl_other,
+        brown_glass,
+        green_glass,
+        white_glass,
+        can,
+        paper,
+        compounds
     }
+
+    [SerializeField] public string objectName;
+    [SerializeField] public ItemType itemType;
+
+    //[SerializeField] public ItemType type;
 }

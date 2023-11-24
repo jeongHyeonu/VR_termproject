@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 7738652016858321971}
   - component: {fileID: 650665445362402307}
   - component: {fileID: 3525597678299523210}
+  - component: {fileID: 815559434899333931}
   m_Layer: 29
   m_Name: '[BB] Throwable Item'
   m_TagString: Untagged
@@ -227,6 +228,20 @@ MonoBehaviour:
   _grabbable: {fileID: 7738652016858321971}
   _rigidbody: {fileID: 5924577120533891934}
   _scaleMassWithSize: 1
+--- !u!114 &815559434899333931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454145630413153871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e522458e4438ee44abc7777a0a93ffb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectName: 
+  itemType: 9
 --- !u!1 &7053011354449722800
 GameObject:
   m_ObjectHideFlags: 0
