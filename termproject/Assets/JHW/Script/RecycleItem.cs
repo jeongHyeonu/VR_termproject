@@ -1,3 +1,4 @@
+using Oculus.Interaction;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -21,7 +22,8 @@ public class RecycleItem : MonoBehaviour
         can,
         paper,
         compounds,
-        not_recycleAble
+        not_recycleAble,
+        leftOver
     }
 
     [SerializeField] public string objectName;
@@ -38,5 +40,16 @@ public class RecycleItem : MonoBehaviour
     public void RemoveSubObject(RecycleItem i) 
     {
         subObjList.Remove(i);
+    }
+
+    public void SubObjectSelect(RecycleItem _item)
+    {
+        // 서브오브젝트 속성 재설정
+        _item.GetComponent<Rigidbody>().isKinematic = false;
+        _item.GetComponent<Collider>().isTrigger = false;
+        _item.GetComponent<RecycleItem>().isSubObject = false;
+        if(_item.transform.parent != null) _item.transform.parent.parent.GetComponent<RecycleItem>().RemoveSubObject(_item); // 하드코딩 ㅈㅅ.. 구현은 이게 빨라서
+        _item.transform.transform.parent = null; // 하드코딩 ㅈㅅ.. ㅋㅋㅋ
+        Destroy(_item.GetComponent<InteractableUnityEventWrapper>());
     }
 }

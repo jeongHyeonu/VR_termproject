@@ -124,8 +124,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 3.3509269, z: 1}
-  m_Center: {x: 0, y: 1.6322789, z: 0}
+  m_Size: {x: 0.8, y: 3, z: 0.8}
+  m_Center: {x: 0, y: 1.5691078, z: 0}
 --- !u!54 &6289802135574204979
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -134,7 +134,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4504089950734208404}
   serializedVersion: 4
-  m_Mass: 0.5
+  m_Mass: 0.1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -246,8 +246,9 @@ MonoBehaviour:
   subObjList:
   - {fileID: 3996163257772734676}
   - {fileID: 4933887019084760555}
-  wrongTxt: 
-  wrongSound: {fileID: 0}
+  wrongTxt: "\uC720\uB9AC\uBCD1\uC740 \uB69C\uAED1\uACFC \uB77C\uBCA8\uC744 \uBD84\uB9AC\uD574
+    \uBC84\uB824\uC8FC\uC138\uC694."
+  wrongSound: {fileID: 8300000, guid: d2e23f0890fefa949afd9fbfb23a2070, type: 3}
 --- !u!1 &7790334421087764168
 GameObject:
   m_ObjectHideFlags: 0
@@ -357,6 +358,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -6733177361254619370, guid: 96dace229db93164f9b45c21037c3bb5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 9024922284089154044}
+    - targetCorrespondingSourceObject: {fileID: -6733177361254619370, guid: 96dace229db93164f9b45c21037c3bb5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4001658978871314459}
     - targetCorrespondingSourceObject: {fileID: 8700725330082129686, guid: 96dace229db93164f9b45c21037c3bb5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5333930356731181226}
@@ -420,8 +424,8 @@ MonoBehaviour:
   _maxSelectingInteractors: -1
   _data: {fileID: 0}
   _pointableElement: {fileID: 5333930356731181226}
-  _rigidbody: {fileID: 6289802135574204979}
-  _physicsGrabbable: {fileID: 5916121807344308179}
+  _rigidbody: {fileID: 3655272893545675393}
+  _physicsGrabbable: {fileID: 4530539173796966440}
   _resetGrabOnGrabsUpdated: 1
   _scoringModifier:
     _positionRotationWeight: 0.8
@@ -452,7 +456,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3705060545464691011}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 0.1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -490,7 +494,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.9556875, y: 0.95568734, z: 0.3825687}
+  m_Size: {x: 1.2, y: 1.2, z: 0.7}
   m_Center: {x: 0.0000020219513, y: -0.000015237675, z: -0.0136112515}
 --- !u!114 &7169846381106963656
 MonoBehaviour:
@@ -514,57 +518,9 @@ MonoBehaviour:
   _whenSelect:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.Transform, UnityEngine
-        m_MethodName: SetParent
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 3655272893545675393}
-        m_TargetAssemblyTypeName: UnityEngine.Rigidbody, UnityEngine
-        m_MethodName: set_isKinematic
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 4933887019084760555}
         m_TargetAssemblyTypeName: RecycleItem, Assembly-CSharp
-        m_MethodName: ChangeSubObject
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 6627577572198926996}
-        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
-        m_MethodName: set_isTrigger
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2726157627875797040}
-        m_TargetAssemblyTypeName: RecycleItem, Assembly-CSharp
-        m_MethodName: RemoveSubObject
+        m_MethodName: SubObjectSelect
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 4933887019084760555}
@@ -605,7 +561,7 @@ MonoBehaviour:
   itemType: 12
   isSubObject: 1
   subObjList: []
-  wrongTxt: 
+  wrongTxt: "\uC720\uB9AC\uBCD1 \uB69C\uAED1\uC740 Can\uC5D0 \uBC84\uB824\uC8FC\uC138\uC694."
   wrongSound: {fileID: 0}
 --- !u!114 &4530539173796966440
 MonoBehaviour:
@@ -668,8 +624,8 @@ MonoBehaviour:
   _maxSelectingInteractors: -1
   _data: {fileID: 0}
   _pointableElement: {fileID: 1640889360198438284}
-  _rigidbody: {fileID: 6289802135574204979}
-  _physicsGrabbable: {fileID: 5916121807344308179}
+  _rigidbody: {fileID: 487352512380515646}
+  _physicsGrabbable: {fileID: 9024922284089154044}
   _resetGrabOnGrabsUpdated: 1
   _scoringModifier:
     _positionRotationWeight: 0.8
@@ -700,7 +656,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7591619422108936515}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 0.1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -738,8 +694,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.137129, y: 2.1371286, z: 1.6430447}
-  m_Center: {x: 0.0000038146973, y: -0.000022888184, z: 0.00022056694}
+  m_Size: {x: 2.5516233, y: 2.608339, z: 1.7494751}
+  m_Center: {x: 0.056722373, y: -0.058942635, z: 0.053435773}
 --- !u!114 &4077504100380645897
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -762,57 +718,9 @@ MonoBehaviour:
   _whenSelect:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.Transform, UnityEngine
-        m_MethodName: SetParent
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 487352512380515646}
-        m_TargetAssemblyTypeName: UnityEngine.Rigidbody, UnityEngine
-        m_MethodName: set_isKinematic
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 3996163257772734676}
         m_TargetAssemblyTypeName: RecycleItem, Assembly-CSharp
-        m_MethodName: ChangeSubObject
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 8430261175428371222}
-        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
-        m_MethodName: set_isTrigger
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2726157627875797040}
-        m_TargetAssemblyTypeName: RecycleItem, Assembly-CSharp
-        m_MethodName: RemoveSubObject
+        m_MethodName: SubObjectSelect
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 3996163257772734676}
@@ -853,7 +761,7 @@ MonoBehaviour:
   itemType: 8
   isSubObject: 1
   subObjList: []
-  wrongTxt: 
+  wrongTxt: "\uC720\uB9AC\uBCD1 \uB77C\uBCA8\uC740 Vinyl - other\uC5D0 \uBC84\uB824\uC8FC\uC138\uC694."
   wrongSound: {fileID: 0}
 --- !u!114 &9024922284089154044
 MonoBehaviour:
@@ -870,3 +778,22 @@ MonoBehaviour:
   _grabbable: {fileID: 1640889360198438284}
   _rigidbody: {fileID: 487352512380515646}
   _scaleMassWithSize: 1
+--- !u!114 &4001658978871314459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7591619422108936515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de76f7169412b8f4896235a1585d8939, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _selector: {fileID: 0}
+  _whenSelected:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenUnselected:
+    m_PersistentCalls:
+      m_Calls: []

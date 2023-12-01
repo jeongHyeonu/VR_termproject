@@ -244,8 +244,8 @@ MonoBehaviour:
   itemType: 13
   isSubObject: 0
   subObjList: []
-  wrongTxt: 
-  wrongSound: {fileID: 0}
+  wrongTxt: "\uC885\uC774\uD329\uC740 \uC885\uC774\uB85C \uBD84\uB9AC\uD574 \uBC84\uB824\uC8FC\uC138\uC694."
+  wrongSound: {fileID: 8300000, guid: d1440cead6a8d0a4ebc541ea73d5e590, type: 3}
 --- !u!1 &5225217653395866336
 GameObject:
   m_ObjectHideFlags: 0

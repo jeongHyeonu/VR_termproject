@@ -12,9 +12,14 @@ public class RecycleBox : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         Debug.Log(collision.gameObject.name);
+        if (itemTypeReceiver == RecycleItem.ItemType.leftOver) { Destroy(collision.gameObject); return; }
+        if (Stage2GameManager.instance.gameStoped) return; // 게임 종료됬으면 실행X
+       
         if (collision.gameObject.GetComponent<RecycleItem>() != null)
         {
+            Destroy(collision.gameObject);
             RecycleItem item = collision.gameObject.GetComponent<RecycleItem>();
+            
             if (itemTypeReceiver == item.itemType)
             {
                 if (item.subObjList.Count > 0) // 페트병의 라벨, 병뚜껑 등 subobject 분리 못한경우
@@ -23,7 +28,7 @@ public class RecycleBox : MonoBehaviour
                     ox_text.color = new Color(1f, .7f, 0f, .7f);
                     Stage2GameManager.instance.GetScore(5);
                     Stage2GameManager.instance.AlertMessage(item.wrongTxt);
-                    SoundManager.instance.playByClip(item.wrongSound);
+                    if(item.wrongSound) SoundManager.instance.playByClip(item.wrongSound);
                 }
                 else // 그외
                 {
@@ -40,9 +45,10 @@ public class RecycleBox : MonoBehaviour
                 ox_text.text = "X";
                 ox_text.color = new Color(1f, 0f, 0f, .7f);
                 SoundManager.instance.RecycleWrongSound();
+                if (item.wrongSound) SoundManager.instance.playByClip(item.wrongSound);
+                Stage2GameManager.instance.AlertMessage(item.wrongTxt);
             }
             StartCoroutine(OXTextOff());
-            Destroy(item.gameObject);
         }
     }
 

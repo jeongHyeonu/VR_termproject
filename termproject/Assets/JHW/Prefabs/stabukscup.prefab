@@ -276,8 +276,9 @@ MonoBehaviour:
   itemType: 3
   isSubObject: 0
   subObjList: []
-  wrongTxt: 
-  wrongSound: {fileID: 0}
+  wrongTxt: "\uD14C\uC774\uD06C\uC544\uC6C3 \uCEF5\uC740 \uB69C\uAED1\uC744 \uBD84\uB9AC\uD558\uACE0
+    Plastic - PS \uC73C\uB85C \uBC84\uB824\uC8FC\uC138\uC694."
+  wrongSound: {fileID: 8300000, guid: 38d32915f12d950489f59e38e5c283d8, type: 3}
 --- !u!1001 &8333707468722465084
 PrefabInstance:
   m_ObjectHideFlags: 0

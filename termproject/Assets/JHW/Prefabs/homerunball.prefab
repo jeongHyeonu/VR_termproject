@@ -244,8 +244,8 @@ MonoBehaviour:
   itemType: 8
   isSubObject: 0
   subObjList: []
-  wrongTxt: 
-  wrongSound: {fileID: 0}
+  wrongTxt: "\uACFC\uC790 \uBD09\uC9C0\uB294 Vinyl - other \uC5D0 \uBC84\uB824\uC8FC\uC138\uC694."
+  wrongSound: {fileID: 8300000, guid: 4ff9df78370f20543b03984014697b65, type: 3}
 --- !u!1 &4414411177985664534
 GameObject:
   m_ObjectHideFlags: 0

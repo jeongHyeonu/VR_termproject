@@ -1,10 +1,14 @@
 using DG.Tweening;
 using DG.Tweening.Core.Easing;
 using Meta.WitAi.Lib;
+using Oculus.Interaction;
+using OculusSampleFramework;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Stage2GameManager : MonoBehaviour
@@ -12,6 +16,7 @@ public class Stage2GameManager : MonoBehaviour
 
     public static Stage2GameManager instance = null;
 
+    [SerializeField] public GameObject boardCanvas;
     [SerializeField] public TextMeshProUGUI timeText;
     [SerializeField] public TextMeshProUGUI scoreText;
     [SerializeField] public TextMeshProUGUI alertText;
@@ -21,7 +26,7 @@ public class Stage2GameManager : MonoBehaviour
     private List<bool> isSpawned = new List<bool>();
 
     private int totalScore;
-    private bool gameStoped = true;
+    public bool gameStoped = true;
     public float limitTime = 90f;
     int min;
     float sec;
@@ -72,6 +77,8 @@ public class Stage2GameManager : MonoBehaviour
 
     public void GameStart()
     {
+        boardCanvas.transform.DOLocalMoveY(.7f, 3f);
+        boardCanvas.transform.DOLocalRotate(new Vector3(-20,0,0), 3f);
         gameStoped = false;
         totalScore = 0;
         StartCoroutine(ItemSpawner(0f));
@@ -80,7 +87,12 @@ public class Stage2GameManager : MonoBehaviour
     public void GameStop()
     {
         gameStoped = true;
+        boardCanvas.transform.DOLocalMoveY(.4f, 3f);
+        boardCanvas.transform.DOLocalRotate(Vector3.zero, 3f);
+        Invoke("gotoLobby", 5f); // 5초 뒤 로비화면으로
     }
+
+    private void gotoLobby() { SceneManager.LoadScene("SampleScene"); }
 
     public void GetScore(int score)
     {
@@ -102,6 +114,8 @@ public class Stage2GameManager : MonoBehaviour
         });
     }
 
+
+
     IEnumerator ItemSpawner(float _time)
     {
         // _time 시간 후에 실행
@@ -109,28 +123,31 @@ public class Stage2GameManager : MonoBehaviour
 
 
 
-        while (true) // 중복 제거하고 랜덤 오브젝트 불러오기
-        {
-            // 중복제거
-            int randomObjIdx = Random.Range(0, itemList.Count);
-            if (isSpawned[randomObjIdx]) // 중복인 경우 체크
-            {
-                // 무한반복문에 크래시 뜨는 경우도 있어서.. 일부 랜덤 오브젝트는 중복 풀어두기
-                isSpawned[Random.Range(0, itemList.Count)] = false;
-                continue;
-            }
+        //while (true) // 중복 제거하고 랜덤 오브젝트 불러오기.. 는 while문 렉걸려서 안하는게 좋을듯
+        //{
+            // 중복제거.. 
+            //int randomObjIdx = Random.Range(0, itemList.Count);
+            //if (isSpawned[randomObjIdx]) // 중복인 경우 체크
+            //{
+            //    // 무한반복문에 크래시 뜨는 경우도 있어서.. 일부 랜덤 오브젝트는 중복 풀어두기
+            //    isSpawned[Random.Range(0, itemList.Count)] = false;
+            //    continue;
+            //}
 
             // 아이템 Instantiate
-            isSpawned[randomObjIdx] = true;
-            GameObject randomObj = Instantiate(itemList[randomObjIdx], itemSpawnPoint.transform);
-            
-            break;
-        }
+            //isSpawned[randomObjIdx] = true;
+            //GameObject randomObj = Instantiate(itemList[randomObjIdx], itemSpawnPoint.transform.position, Quaternion.identity);
+        //break;
+        //}
+
+        int randomObjIdx = Random.Range(0, itemList.Count);
+        isSpawned[randomObjIdx] = true;
+        GameObject randomObj = Instantiate(itemList[randomObjIdx], itemSpawnPoint.transform.position, Quaternion.identity);
 
         // 게임 종료됬다면 스폰 멈춘다
         if (gameStoped) yield return null;
 
         // 아니라면 아이템 스폰 계속 진행
-        StartCoroutine(ItemSpawner(Random.Range(5f,10f)));
+        StartCoroutine(ItemSpawner(Random.Range(2f,4f)));
     }
 }
